@@ -13825,19 +13825,20 @@ const A1 = [
           n.jsxs("div", {
             className: `${C} rotate-y-180 bg-indigo-600 text-white`,
             children: [
-              n.jsxs("div", {
-                className: "flex flex-col",
-                children: [
-                  n.jsx("h4", {
-                    className: "font-bold text-lg mb-2",
-                    children: y,
-                  }),
-                  id !== "nps" && n.jsx("p", { className: "text-sm opacity-90", children: x }),
-                ],
-              }),
+              id !== "nps" &&
+                n.jsxs("div", {
+                  className: "flex flex-col",
+                  children: [
+                    n.jsx("h4", {
+                      className: "font-bold text-lg mb-2",
+                      children: y,
+                    }),
+                    n.jsx("p", { className: "text-sm opacity-90", children: x }),
+                  ],
+                }),
               id === "nps"
                 ? n.jsxs("div", {
-                    className: "flex flex-col gap-2 mt-2",
+                    className: "flex flex-col gap-3 h-full justify-center",
                     children: [
                       n.jsx("button", {
                         className:
