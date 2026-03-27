@@ -13937,23 +13937,19 @@ const A1 = [
       details: "Get the best rates for your dream home.",
     },
     {
-      id: "health-checkup",
-      title: "Health Checkup",
-      icon: n.jsx(j0, { className: "text-cyan-500" }),
-      implemented: !1,
-      details: "Book health checkups from top-rated labs.",
-    },
-    {
-      id: "hospitals",
-      title: "Listed Hospitals",
-      icon: n.jsx(g0, { className: "text-pink-500" }),
-      implemented: !1,
-      details: "Find network hospitals for cashless treatments.",
+      id: "network-hospitals",
+      title: "Network Hospitals",
+      icon: n.jsx(g0, { className: "text-rose-500" }),
+      implemented: !0,
+      details: "Locate network hospitals and health checkup centers near you.",
     },
   ],
   l0 = ({ onNavigate: r }) => {
     const y = (x) => {
-      x === "insurance" ? r("Insurance") : x === "mutual-funds" ? r("Clients") : x === "loan-mf" && window.open("https://voltmoney.in/check-loan-eligibility-against-mutual-funds?ref=TD39OO", "_blank");
+      if (x === "insurance") r("Insurance");
+      else if (x === "mutual-funds") r("Clients");
+      else if (x === "loan-mf") window.open("https://voltmoney.in/check-loan-eligibility-against-mutual-funds?ref=TD39OO", "_blank");
+      else if (x === "network-hospitals") window.open("https://www.manipalcigna.com/locate-us", "_blank");
     };
     return n.jsx("div", {
       className: "pb-24",
@@ -19060,16 +19056,10 @@ const A1 = [
       implemented: !1,
     },
     {
-      id: "health-checkup",
-      title: "Health Checkup",
-      icon: n.jsx(j0, { size: 20 }),
-      implemented: !1,
-    },
-    {
-      id: "hospitals",
-      title: "Listed Hospitals",
+      id: "network-hospitals",
+      title: "Network Hospitals",
       icon: n.jsx(g0, { size: 20 }),
-      implemented: !1,
+      implemented: !0,
     },
   ],
   tb = ({ isOpen: r, onClose: y, onNavigate: x }) => {
@@ -19087,6 +19077,7 @@ const A1 = [
         if (D.id === "insurance") x("Insurance");
         else if (D.id === "mutual-funds") x("Clients");
         else if (D.id === "profile") x("Profile");
+        else if (D.id === "network-hospitals") window.open("https://www.manipalcigna.com/locate-us", "_blank");
         y();
       },
       O = () => {
