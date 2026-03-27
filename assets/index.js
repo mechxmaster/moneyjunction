@@ -13946,7 +13946,7 @@ const A1 = [
   ],
   l0 = ({ onNavigate: r }) => {
     const y = (x) => {
-      if (x === "insurance") r("Insurance");
+      if (x === "insurance") r("Reports");
       else if (x === "mutual-funds") r("Clients");
       else if (x === "loan-mf") window.open("https://voltmoney.in/check-loan-eligibility-against-mutual-funds?ref=TD39OO", "_blank");
       else if (x === "network-hospitals") window.open("https://www.manipalcigna.com/locate-us", "_blank");
@@ -19074,7 +19074,7 @@ const A1 = [
           console.log(`${D.title} is not implemented yet.`);
           return;
         }
-        if (D.id === "insurance") x("Insurance");
+        if (D.id === "insurance") x("Reports");
         else if (D.id === "mutual-funds") x("Clients");
         else if (D.id === "profile") x("Profile");
         else if (D.id === "network-hospitals") window.open("https://www.manipalcigna.com/locate-us", "_blank");
