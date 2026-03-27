@@ -18940,7 +18940,7 @@ const A1 = [
     },
     {
       id: "network-hospitals",
-      title: "Network Hospitals",
+      title: "Network Hospitals/Diagnostic Centre",
       icon: n.jsx(g0, { size: 20 }),
       implemented: !0,
     },
