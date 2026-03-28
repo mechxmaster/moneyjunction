@@ -13946,7 +13946,7 @@ const A1 = [
   ],
   l0 = ({ onNavigate: r }) => {
     const y = (x) => {
-      if (x === "insurance") r("Reports");
+      if (x === "insurance") r("Insurance");
       else if (x === "mutual-funds") r("Clients");
       else if (x === "loan-mf") window.open("https://voltmoney.in/check-loan-eligibility-against-mutual-funds?ref=TD39OO", "_blank");
       else if (x === "network-hospitals") window.open("https://www.manipalcigna.com/locate-us", "_blank");
@@ -18894,6 +18894,105 @@ const A1 = [
       ],
     });
   },
+  InsuranceView = ({ onBack: r }) => {
+    const [y, x] = M.useState("selection");
+    const d = {
+      health: [
+        { name: "Lifetime Health", url: "https://online.manipalcigna.com/sellonline/sell-journey/intermediary-selection?q=/jJCCai4V2mtQg4U/L4juMDliYKB4h2tJD2eqNobTavF1gos4tBJMfDGAJn76KEYioEF+XA5k4lKxKl+frmj+NQcN/movczH/h63sk12LSARJK0FD/JPMft7L94M5VXimyPuc6Pgtd1P9YqXrqyr4VvZK6zeIE2Ezs7C0aJnud+G2R+xhogkg5FrEjp/2OaNp/FxH0R5Jw6kZMeD8AUcEQ==" },
+        { name: "Prime Senior", url: "https://online.manipalcigna.com/sellonline/sell-journey/intermediary-selection?q=/jJCCai4V2mtQg4U/L4juMDliYKB4h2tJD2eqNobTavF1gos4tBJMfDGAJn76KEYioEF+XA5k4lKxKl+frmj+NQcN/movczH/h63sk12LSA/tWhe9oMN3CST1LAZ4D9ZZZBneqLmpq3fSyfyEHmpNVVD/Yt7bGHONWCg3qg13UnXrKnJf3/IxrVzfZE4b51f" },
+        { name: "Super Top-up", url: "https://online.manipalcigna.com/sellonline/sell-journey/intermediary-selection?q=/jJCCai4V2mtQg4U/L4juMDliYKB4h2tJD2eqNobTavF1gos4tBJMfDGAJn76KEYioEF+XA5k4lKxKl+frmj+NQcN/movczH/h63sk12LSCIeb6JzrXtBI4LyuUf2H1MpCVwsALtn+l8jbsfmRUTAFVD/Yt7bGHONWCg3qg13UnXrKnJf3/IxrVzfZE4b51f" },
+        { name: "Sarvah", url: "https://online.manipalcigna.com/sellonline/sell-journey/intermediary-selection?q=/jJCCai4V2mtQg4U/L4juMDliYKB4h2tJD2eqNobTavF1gos4tBJMfDGAJn76KEYioEF+XA5k4lKxKl+frmj+NQcN/movczH/h63sk12LSDBAwE/ZVJDE7tVrQjjR3VtlIuak61/VFK6p2PlAsq9ittNnYnjeykxsXBQ6Pa6yTSNkxwbkG6IbwcUWrtNCAPw" },
+        { name: "Accident Shield", url: "https://online.manipalcigna.com/sellonline/sell-journey/intermediary-selection?q=/jJCCai4V2mtQg4U/L4juMDliYKB4h2tJD2eqNobTavF1gos4tBJMfDGAJn76KEYioEF+XA5k4lKxKl+frmj+NQcN/movczH/h63sk12LSCwtydggKusJYKTzQ0VlOHSttHLYPdZc5OT3CY3f4fx61vZK6zeIE2Ezs7C0aJnud+G2R+xhogkg5FrEjp/2OaNp/FxH0R5Jw6kZMeD8AUcEQ==" }
+      ],
+      life: [
+        { name: "iProtect Smart Plus", url: "https://buy.iciciprulife.com/buy/UID.htm?agentCode=YVNrYVI3VHk5SFJwU3RKeUNoU2x6dz09Cg==&productCode=VlpTc2plYWhUazg9Cg==&UIDId=7691161" },
+        { name: "iProtect Super", url: "https://buy.iciciprulife.com/buy/UID.htm?agentCode=YVNrYVI3VHk5SFJwU3RKeUNoU2x6dz09Cg==&productCode=Mk5SempVOWRmVlk9Cg==&UIDId=7691176" },
+        { name: "ICICI Pru Protect N grain", url: "https://buy.iciciprulife.com/buy/UID.htm?agentCode=YVNrYVI3VHk5SFJwU3RKeUNoU2x6dz09Cg==&productCode=V2VZaWxaZEFUU3c9Cg==&UIDId=7691180" },
+        { name: "ICICI Pru Protect N grain Whole Life", url: "https://buy.iciciprulife.com/buy/UID.htm?agentCode=YVNrYVI3VHk5SFJwU3RKeUNoU2x6dz09Cg==&productCode=MDZZWTRxUXV5cms9Cg==&UIDId=7691182" },
+        { name: "Product Recommendation Retirement", url: "https://buy.iciciprulife.com/buy/UID.htm?agentCode=YVNrYVI3VHk5SFJwU3RKeUNoU2x6dz09Cg==&productCode=L05sWnZDeURnVkd0RzJpMndQSU04Zz09Cg==&UIDId=7691184" }
+      ]
+    };
+    if (y === "selection") return n.jsxs("div", {
+      className: "p-5 animate-in fade-in duration-500",
+      children: [
+        n.jsxs("div", {
+          className: "flex items-center gap-4 mb-8",
+          children: [
+            n.jsx("button", { onClick: r, className: "p-2 bg-white rounded-full shadow-sm text-slate-600", children: n.jsx(Uc, { size: 20 }) }),
+            n.jsx("h2", { className: "text-2xl font-bold text-slate-800", children: "Insurance Plans" })
+          ]
+        }),
+        n.jsxs("div", {
+          className: "grid grid-cols-1 gap-6",
+          children: [
+            n.jsxs("div", {
+              onClick: () => x("health"),
+              className: "bg-gradient-to-br from-emerald-500 to-teal-600 rounded-[32px] p-6 text-white shadow-xl relative overflow-hidden cursor-pointer active:scale-[0.98] transition-transform",
+              children: [
+                n.jsx("div", { className: "absolute top-[-20px] right-[-20px] w-32 h-32 bg-white/10 rounded-full blur-2xl" }),
+                n.jsxs("div", {
+                  className: "relative z-10 flex flex-col h-full",
+                  children: [
+                    n.jsx("div", { className: "bg-white/20 w-12 h-12 rounded-2xl flex items-center justify-center mb-4", children: n.jsx(j0, { size: 24 }) }),
+                    n.jsx("h3", { className: "text-2xl font-bold mb-1", children: "Health Insurance" }),
+                    n.jsx("p", { className: "text-emerald-50 text-sm opacity-90", children: "Protect yourself and your family with top health plans." }),
+                    n.jsxs("div", { className: "mt-6 flex items-center gap-2 text-xs font-bold bg-white/20 w-fit px-3 py-1.5 rounded-full", children: ["View 5 Plans ", n.jsx(Rn, { size: 12 })] })
+                  ]
+                })
+              ]
+            }),
+            n.jsxs("div", {
+              onClick: () => x("life"),
+              className: "bg-gradient-to-br from-blue-600 to-indigo-700 rounded-[32px] p-6 text-white shadow-xl relative overflow-hidden cursor-pointer active:scale-[0.98] transition-transform",
+              children: [
+                n.jsx("div", { className: "absolute top-[-20px] right-[-20px] w-32 h-32 bg-white/10 rounded-full blur-2xl" }),
+                n.jsxs("div", {
+                  className: "relative z-10 flex flex-col h-full",
+                  children: [
+                    n.jsx("div", { className: "bg-white/20 w-12 h-12 rounded-2xl flex items-center justify-center mb-4", children: n.jsx(f1, { size: 24 }) }),
+                    n.jsx("h3", { className: "text-2xl font-bold mb-1", children: "Life Insurance" }),
+                    n.jsx("p", { className: "text-blue-50 text-sm opacity-90", children: "Secure your family's future with the best life cover." }),
+                    n.jsxs("div", { className: "mt-6 flex items-center gap-2 text-xs font-bold bg-white/20 w-fit px-3 py-1.5 rounded-full", children: ["View 5 Plans ", n.jsx(Rn, { size: 12 })] })
+                  ]
+                })
+              ]
+            })
+          ]
+        })
+      ]
+    });
+    return n.jsxs("div", {
+      className: "p-5 animate-in slide-in-from-right duration-300",
+      children: [
+        n.jsxs("div", {
+          className: "flex items-center gap-4 mb-6",
+          children: [
+            n.jsx("button", { onClick: () => x("selection"), className: "p-2 bg-white rounded-full shadow-sm text-slate-600", children: n.jsx(Uc, { size: 20 }) }),
+            n.jsx("h2", { className: "text-xl font-bold text-slate-800", children: y === "health" ? "Health Insurance Plans" : "Life Insurance Plans" })
+          ]
+        }),
+        n.jsx("div", {
+          className: "space-y-4",
+          children: d[y].map((W, H) => n.jsxs("div", {
+            className: "bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex justify-between items-center",
+            children: [
+              n.jsxs("div", {
+                children: [
+                  n.jsx("h4", { className: "font-bold text-slate-800", children: W.name }),
+                  n.jsx("p", { className: "text-[10px] text-slate-400 font-bold uppercase mt-1", children: y === "health" ? "Manipal Cigna" : "ICICI Prudential" })
+                ]
+              }),
+              n.jsx("button", {
+                onClick: () => window.open(W.url, "_blank"),
+                className: `px-4 py-2 rounded-xl text-xs font-bold text-white shadow-md ${y === "health" ? "bg-emerald-500 shadow-emerald-200" : "bg-blue-600 shadow-blue-200"}`,
+                children: "Buy Plan"
+              })
+            ]
+          }, H))
+        })
+      ]
+    });
+  },
   eb = [
     {
       id: "insurance",
@@ -18957,7 +19056,7 @@ const A1 = [
           console.log(`${D.title} is not implemented yet.`);
           return;
         }
-        if (D.id === "insurance") x("Reports");
+        if (D.id === "insurance") x("Insurance");
         else if (D.id === "mutual-funds") x("Clients");
         else if (D.id === "profile") x("Profile");
         else if (D.id === "network-hospitals") window.open("https://www.manipalcigna.com/locate-us", "_blank");
@@ -19682,6 +19781,8 @@ const A1 = [
         switch (C) {
           case "Dashboard":
             return n.jsx(l0, { onNavigate: I });
+          case "Insurance":
+            return n.jsx(InsuranceView, { onBack: () => b("Dashboard") });
           case "Clients":
             if (r.role === "AGENT")
               return n.jsx(O1, { onViewPortfolio: (W) => T(W) });
