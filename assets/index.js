@@ -19837,67 +19837,77 @@ const A1 = [
             });
           case "Subscription":
             return n.jsx("div", {
-              className: "p-5 animate-in fade-in duration-500",
+              className: "p-5 space-y-6 flex flex-col items-center animate-in fade-in duration-500 pb-24",
               children: [
-                n.jsxs("div", {
-                  className: "bg-gradient-to-br from-indigo-600 to-indigo-800 rounded-3xl p-6 text-white shadow-xl mb-6 relative overflow-hidden",
-                  children: [
-                    n.jsx("div", { className: "absolute top-[-20px] right-[-20px] w-40 h-40 bg-white/10 rounded-full blur-2xl" }),
-                    n.jsxs("div", {
-                      className: "relative z-10",
-                      children: [
-                        n.jsxs("div", {
-                          className: "flex justify-between items-start",
-                          children: [
-                            n.jsxs("div", {
-                              children: [
-                                n.jsx("p", { className: "text-indigo-100 text-sm font-medium", children: "Current Plan" }),
-                                n.jsx("h2", { className: "text-3xl font-black mt-1 uppercase tracking-tight", children: "Premium" }),
-                              ],
-                            }),
-                            n.jsx("div", { className: "bg-white/20 p-2 rounded-xl backdrop-blur-sm", children: n.jsx(h0, { size: 24 }) }),
-                          ],
-                        }),
-                        n.jsxs("div", {
-                          className: "mt-8 flex items-baseline gap-1",
-                          children: [
-                            n.jsx("span", { className: "text-4xl font-black", children: "₹ 999" }),
-                            n.jsx("span", { className: "text-indigo-200 text-sm", children: "/ year" }),
-                          ],
-                        }),
-                        n.jsx("div", {
-                          className: "mt-4 pt-4 border-t border-white/10",
-                          children: n.jsxs("div", {
-                            className: "flex items-center gap-2 text-indigo-100",
-                            children: [
-                              n.jsx(b1, { size: 14 }),
-                              n.jsx("span", { className: "text-xs font-bold", children: "Next renewal on March 27, 2027" }),
-                            ],
-                          }),
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-                n.jsxs("div", {
-                  className: "space-y-4",
-                  children: [
-                    n.jsx("h3", { className: "font-bold text-slate-800", children: "Subscription Benefits" }),
-                    [
+                {
+                  id: "monthly",
+                  name: "1 Month",
+                  price: "1,200",
+                  period: "for 1 month",
+                  badge: "BASIC",
+                  bg: "bg-white text-slate-900"
+                },
+                {
+                  id: "half-yearly",
+                  name: "6 Months",
+                  price: "6,000",
+                  period: "for 6 months",
+                  badge: "POPULAR",
+                  bg: "bg-slate-900 text-white"
+                },
+                {
+                  id: "yearly",
+                  name: "1 Year",
+                  price: "10,000",
+                  period: "for 1 year",
+                  badge: "BEST VALUE",
+                  bg: "bg-white text-slate-900"
+                }
+              ].map((P, i) => n.jsxs("div", {
+                className: `w-full max-w-md ${P.bg} rounded-[32px] p-6 shadow-xl relative overflow-hidden flex flex-col border border-slate-100 cursor-pointer active:scale-[0.98] transition-all`,
+                style: P.bg.includes("slate-900") ? { backgroundColor: "#0f172a" } : { backgroundColor: "#ffffff" },
+                children: [
+                  n.jsx("div", {
+                    className: "absolute top-5 right-5 text-[10px] font-extrabold px-3 py-1 rounded-full shadow-md z-10 text-white",
+                    style: P.id === "monthly" ? { backgroundColor: "#2563eb" } : (P.id === "half-yearly" ? { backgroundColor: "#10b981" } : { backgroundColor: "#f59e0b" }),
+                    children: P.badge
+                  }),
+                  n.jsxs("div", {
+                    className: "mb-6",
+                    children: [
+                      n.jsx("h3", { className: "text-sm font-bold uppercase tracking-wider opacity-60", children: P.name }),
+                      n.jsxs("div", {
+                        className: "mt-2 flex items-baseline gap-1",
+                        children: [
+                          n.jsx("span", { className: "text-4xl font-black", children: "₹ " + P.price }),
+                          n.jsx("span", { className: "text-sm font-bold opacity-50", children: P.period })
+                        ]
+                      })
+                    ]
+                  }),
+                  n.jsx("div", { className: `border-t ${P.bg.includes("slate") ? "border-slate-800" : "border-slate-100"} mb-6` }),
+                  n.jsx("div", {
+                    className: "space-y-4 mb-8",
+                    children: [
                       "Unlimited document storage",
                       "Priority support within 2 hours",
                       "Early access to new features",
-                      "Customized financial reports",
-                    ].map((W, H) => n.jsxs("div", {
-                      className: "flex items-center gap-3 bg-white p-4 rounded-2xl border border-slate-100 shadow-sm",
+                      "Customized financial reports"
+                    ].map((feat, idx) => n.jsxs("div", {
+                      className: "flex items-center gap-3",
                       children: [
-                        n.jsx("div", { className: "bg-emerald-100 text-emerald-600 p-1 rounded-full", children: n.jsx(f0, { size: 14 }) }),
-                        n.jsx("span", { className: "text-sm text-slate-700 font-medium", children: W }),
-                      ],
-                    }, H)),
-                  ],
-                }),
-              ],
+                         n.jsx("div", { className: `p-1 rounded-full ${P.bg.includes('slate') ? 'bg-emerald-900/40 text-emerald-400' : 'bg-emerald-100 text-emerald-600'}`, children: n.jsx(f0, { size: 14, strokeWidth: 3 }) }),
+                         n.jsx("span", { className: "text-sm font-medium opacity-90", children: feat })
+                      ]
+                    }, idx))
+                  }),
+                  n.jsx("button", {
+                    className: "w-full py-4 rounded-xl font-bold text-sm text-white shadow-xl active:scale-95 transition-all mt-auto",
+                    style: P.id === "monthly" ? { backgroundColor: "#2563eb" } : (P.id === "half-yearly" ? { backgroundColor: "#10b981" } : { backgroundColor: "#f59e0b" }),
+                    children: "Select Plan"
+                  })
+                ]
+              }, i))
             });
           case "Profile":
             return n.jsx(V1, {});
