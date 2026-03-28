@@ -18919,7 +18919,7 @@ const A1 = [
           className: "flex items-center gap-4 mb-8",
           children: [
             n.jsx("button", { onClick: r, className: "p-3 bg-white rounded-2xl shadow-sm text-slate-800", children: n.jsx(Uc, { size: 24 }) }),
-            n.jsx("h2", { className: "text-2xl font-black text-slate-900", children: "Insurance Plans" })
+            n.jsx("h2", { style: { color: "#1a1a1a" }, className: "text-2xl font-black", children: "Insurance Plans" })
           ]
         }),
         n.jsxs("div", {
@@ -18934,8 +18934,8 @@ const A1 = [
                   className: "relative z-10 flex flex-col h-full",
                   children: [
                     n.jsx("div", { className: "bg-emerald-500 text-white w-14 h-14 rounded-3xl flex items-center justify-center mb-6 shadow-lg shadow-emerald-200", children: n.jsx(j0, { size: 30 }) }),
-                    n.jsx("h3", { className: "text-2xl font-black text-slate-900 mb-2", children: "Health Insurance" }),
-                    n.jsx("p", { className: "text-slate-500 text-sm font-medium leading-relaxed max-w-[80%]", children: "Protect yourself and your family with premium health protection." }),
+                    n.jsx("h3", { style: { color: "#1a1a1a" }, className: "text-2xl font-black mb-2", children: "Health Insurance" }),
+                    n.jsx("p", { style: { color: "#4b5563" }, className: "text-sm font-medium leading-relaxed max-w-[80%]", children: "Protect yourself and your family with premium health protection." }),
                     n.jsxs("div", { className: "mt-8 flex items-center gap-2 text-xs font-black text-emerald-600 bg-emerald-50 w-fit px-5 py-2.5 rounded-2xl", children: ["View 5 Plans ", n.jsx(Rn, { size: 14 })] })
                   ]
                 })
@@ -18950,8 +18950,8 @@ const A1 = [
                   className: "relative z-10 flex flex-col h-full",
                   children: [
                     n.jsx("div", { className: "bg-blue-600 text-white w-14 h-14 rounded-3xl flex items-center justify-center mb-6 shadow-lg shadow-blue-200", children: n.jsx(f1, { size: 30 }) }),
-                    n.jsx("h3", { className: "text-2xl font-black text-slate-900 mb-2", children: "Life Insurance" }),
-                    n.jsx("p", { className: "text-slate-500 text-sm font-medium leading-relaxed max-w-[80%]", children: "Secure your family's financial future with the best life cover." }),
+                    n.jsx("h3", { style: { color: "#1a1a1a" }, className: "text-2xl font-black mb-2", children: "Life Insurance" }),
+                    n.jsx("p", { style: { color: "#4b5563" }, className: "text-sm font-medium leading-relaxed max-w-[80%]", children: "Secure your family's financial future with the best life cover." }),
                     n.jsxs("div", { className: "mt-8 flex items-center gap-2 text-xs font-black text-blue-600 bg-blue-50 w-fit px-5 py-2.5 rounded-2xl", children: ["View 5 Plans ", n.jsx(Rn, { size: 14 })] })
                   ]
                 })
@@ -18968,7 +18968,7 @@ const A1 = [
           className: "flex items-center gap-4 mb-8",
           children: [
             n.jsx("button", { onClick: () => x("selection"), className: "p-3 bg-white rounded-2xl shadow-sm text-slate-800", children: n.jsx(Uc, { size: 24 }) }),
-            n.jsx("h2", { className: "text-2xl font-black text-slate-900", children: y === "health" ? "Health Plans" : "Life Plans" })
+            n.jsx("h2", { style: { color: "#1a1a1a" }, className: "text-2xl font-black", children: y === "health" ? "Health Plans" : "Life Plans" })
           ]
         }),
         n.jsx("div", {
@@ -18981,12 +18981,12 @@ const A1 = [
                 children: [
                   n.jsxs("div", {
                     children: [
-                      n.jsx("h4", { className: "font-black text-lg text-slate-900", children: W.name }),
+                      n.jsx("h4", { style: { color: "#1a1a1a" }, className: "font-black text-lg", children: W.name }),
                       n.jsxs("div", {
                         className: "flex items-center gap-2 mt-1",
                         children: [
                           n.jsx("div", { className: `w-2 h-2 rounded-full ${y === "health" ? "bg-emerald-500" : "bg-blue-600"}` }),
-                          n.jsx("p", { className: "text-xs text-slate-400 font-bold uppercase tracking-wider", children: y === "health" ? "Manipal Cigna" : "ICICI Prudential" })
+                          n.jsx("p", { style: { color: "#9ca3af" }, className: "text-xs font-bold uppercase tracking-wider", children: y === "health" ? "Manipal Cigna" : "ICICI Prudential" })
                         ]
                       })
                     ]
@@ -18997,7 +18997,7 @@ const A1 = [
               n.jsxs("button", {
                 onClick: () => window.open(W.url, "_blank"),
                 className: `w-full py-4 rounded-2xl text-sm font-black text-white shadow-xl flex items-center justify-center gap-2 active:scale-[0.97] transition-all ${y === "health" ? "bg-emerald-500 shadow-emerald-200 hover:bg-emerald-600" : "bg-blue-600 shadow-blue-200 hover:bg-blue-700"}`,
-                children: [n.jsx(Jl, { size: 18 }), "Buy Plan Now"]
+                children: [n.jsx(Jl, { size: 18 }), "Buy Now Plan"]
               })
             ]
           }, H))
