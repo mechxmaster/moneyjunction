@@ -19823,6 +19823,7 @@ const A1 = [
               ],
             });
           case "Referral":
+            if (x && x.role !== "AGENT") return n.jsx("div", { className: "min-h-screen bg-slate-50" });
             return n.jsxs("div", {
               className: "flex flex-col items-center p-6 animate-in zoom-in-95 duration-300 pb-24",
               children: [
@@ -19911,6 +19912,7 @@ const A1 = [
               ],
             });
           case "Subscription":
+            if (x && x.role !== "AGENT") return n.jsx("div", { className: "min-h-screen bg-slate-50" });
             return n.jsxs("div", {
               className: "p-4 animate-in fade-in duration-500 pb-24",
               children: [
