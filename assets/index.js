@@ -19915,7 +19915,7 @@ const A1 = [
               className: "p-4 animate-in fade-in duration-500 pb-24",
               children: [
                 n.jsx("h2", { className: "text-xl font-bold text-slate-800 mt-2 text-center mb-1", children: "Choose Your Plan" }),
-                n.jsx("p", { className: "text-slate-500 text-sm text-center mb-5", children: "All plans include the same great features" }),
+                n.jsx("p", { className: "text-slate-500 text-sm text-center mb-8", children: "All plans include the same great features" }),
                 n.jsx("div", {
                   className: "grid grid-cols-1 md:grid-cols-3 gap-4",
                   children: [
