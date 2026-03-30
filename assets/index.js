@@ -13754,7 +13754,7 @@ const A1 = [
       d = x && x.role === "AGENT",
       v = [
         { id: "Dashboard", icon: Fh, label: "Dashboard" },
-        { id: "Clients", icon: d ? C1 : vh, label: d ? "Clients" : "Holdings" },
+        { id: "Clients", icon: d ? C1 : vh, label: d ? "Clients" : "Portfolio" },
         { id: "Reports", icon: kn, label: "Reports" },
         { id: "Referral", icon: S1, label: "Referral" },
         { id: "Subscription", icon: h0, label: "Subscription" },
@@ -18189,7 +18189,7 @@ const A1 = [
             }),
             n.jsx("h1", {
               className: "text-xl font-bold text-slate-900",
-              children: y ? "Client Portfolio" : "My Holdings",
+              children: y ? "Client Portfolio" : "My Portfolio",
             }),
           ],
         }),
@@ -18314,7 +18314,7 @@ const A1 = [
               children: [
                 n.jsx("h3", {
                   className: "text-lg font-bold text-slate-800 mb-2",
-                  children: "Mutual Fund Holdings",
+                  children: "Mutual Fund Portfolio",
                 }),
                 J.length > 0
                   ? J.map((H) =>
