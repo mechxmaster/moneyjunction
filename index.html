@@ -14,10 +14,10 @@
   <style>
     #pwa-install-container {
       display: none;
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-      text-align: center;
+      justify-content: center;
+      align-items: center;
       width: 100%;
+      margin: 2rem 0;
     }
     #pwa-install-btn {
       padding: 0.5rem 1rem;
@@ -71,7 +71,7 @@
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
       deferredPrompt = e;
-      installContainer.style.display = 'block';
+      installContainer.style.display = 'flex';
     });
 
     installBtn.addEventListener('click', async () => {
