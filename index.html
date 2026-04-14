@@ -20,6 +20,7 @@
       margin: 2rem 0;
       clear: both;
     }
+
     #pwa-install-container.floating {
       position: fixed;
       bottom: 2rem;
@@ -28,6 +29,7 @@
       margin: 0;
       z-index: 9999;
     }
+
     #pwa-install-btn {
       padding: 0.6rem 1.25rem;
       background-color: var(--color-mj-green, #10b981);
@@ -43,9 +45,11 @@
       gap: 0.375rem;
       transition: all 0.2s;
     }
+
     #pwa-install-btn:hover {
       filter: brightness(1.1);
     }
+
     #pwa-install-btn:active {
       transform: scale(0.98);
     }
@@ -54,10 +58,15 @@
 
 <body>
   <div id="root"></div>
-  
+
   <div id="pwa-install-container">
     <button id="pwa-install-btn" type="button">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+        <polyline points="7 10 12 15 17 10" />
+        <line x1="12" y1="15" x2="12" y2="3" />
+      </svg>
       Install App
     </button>
   </div>
@@ -109,7 +118,7 @@
       }
 
       const container = document.getElementById('pwa-install-container');
-      
+
       if (signinBtn) {
         // Show below "Sign in"
         if (container.parentElement !== signinBtn.parentElement || container.nextSibling !== signinBtn.nextSibling) {
@@ -129,7 +138,7 @@
 
     const observer = new MutationObserver(injectButton);
     observer.observe(document.getElementById('root'), { childList: true, subtree: true });
-    
+
     // Fallback check
     setInterval(injectButton, 3000);
   </script>
