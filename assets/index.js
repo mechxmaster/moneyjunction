@@ -13943,6 +13943,13 @@ const A1 = [
       implemented: !0,
       details: "Locate network hospitals and health checkup centers near you.",
     },
+    {
+      id: "real-estates",
+      title: "Real Estates",
+      icon: n.jsx(Rc, { className: "text-blue-500" }),
+      implemented: !1,
+      details: "Explore the best real estate properties.",
+    },
   ],
   l0 = ({ onNavigate: r }) => {
     const y = (x) => {
@@ -19055,6 +19062,12 @@ const A1 = [
       title: "Network Hospitals/Diagnostic Centre",
       icon: n.jsx(g0, { size: 20 }),
       implemented: !0,
+    },
+    {
+      id: "real-estates",
+      title: "Real Estates",
+      icon: n.jsx(Rc, { size: 20 }),
+      implemented: !1,
     },
   ],
   tb = ({ isOpen: r, onClose: y, onNavigate: x }) => {
