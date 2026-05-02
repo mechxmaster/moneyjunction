@@ -13937,18 +13937,18 @@ const A1 = [
       details: "Get the best rates for your dream home.",
     },
     {
-      id: "network-hospitals",
-      title: "Network Hospitals",
-      icon: n.jsx(g0, { className: "text-rose-500" }),
-      implemented: !0,
-      details: "Locate network hospitals and health checkup centers near you.",
-    },
-    {
       id: "real-estates",
       title: "Real Estates",
       icon: n.jsx(Rc, { className: "text-blue-500" }),
       implemented: !1,
       details: "Explore the best real estate properties.",
+    },
+    {
+      id: "network-hospitals",
+      title: "Network Hospitals",
+      icon: n.jsx(g0, { className: "text-rose-500" }),
+      implemented: !0,
+      details: "Locate network hospitals and health checkup centers near you.",
     },
   ],
   l0 = ({ onNavigate: r }) => {
@@ -19058,16 +19058,16 @@ const A1 = [
       implemented: !0,
     },
     {
-      id: "network-hospitals",
-      title: "Network Hospitals/Diagnostic Centre",
-      icon: n.jsx(g0, { size: 20 }),
-      implemented: !0,
-    },
-    {
       id: "real-estates",
       title: "Real Estates",
       icon: n.jsx(Rc, { size: 20 }),
       implemented: !1,
+    },
+    {
+      id: "network-hospitals",
+      title: "Network Hospitals/Diagnostic Centre",
+      icon: n.jsx(g0, { size: 20 }),
+      implemented: !0,
     },
   ],
   tb = ({ isOpen: r, onClose: y, onNavigate: x }) => {
