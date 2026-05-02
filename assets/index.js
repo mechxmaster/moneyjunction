@@ -13950,6 +13950,13 @@ const A1 = [
       implemented: !0,
       details: "Locate network hospitals and health checkup centers near you.",
     },
+    {
+      id: "post-office-savings",
+      title: "Post Office Savings",
+      icon: n.jsx(Un, { className: "text-red-600" }),
+      implemented: !1,
+      details: "Government backed savings schemes for secure returns.",
+    },
   ],
   l0 = ({ onNavigate: r }) => {
     const y = (x) => {
@@ -19068,6 +19075,12 @@ const A1 = [
       title: "Network Hospitals/Diagnostic Centre",
       icon: n.jsx(g0, { size: 20 }),
       implemented: !0,
+    },
+    {
+      id: "post-office-savings",
+      title: "Post Office Savings",
+      icon: n.jsx(Un, { size: 20 }),
+      implemented: !1,
     },
   ],
   tb = ({ isOpen: r, onClose: y, onNavigate: x }) => {
