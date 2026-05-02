@@ -1,4 +1,4 @@
-const CACHE_NAME = 'money-junction-v1';
+const CACHE_NAME = 'money-junction-v2';
 const urlsToCache = [
   '/',
   '/index.html',
