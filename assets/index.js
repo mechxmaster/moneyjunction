@@ -19377,8 +19377,8 @@ const A1 = [
                 }),
                 installPrompt &&
                 n.jsx("div", {
-                  className: "mt-4",
-                  children: n.jsx("button", {
+                  className: "mt-6 flex justify-center",
+                  children: n.jsxs("button", {
                     type: "button",
                     onClick: () => {
                       installPrompt.prompt();
@@ -19390,8 +19390,23 @@ const A1 = [
                       });
                     },
                     className:
-                      "flex w-full justify-center rounded-md bg-emerald-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-emerald-600 transition-colors",
-                    children: "Install App",
+                      "flex items-center gap-2 px-8 py-3 rounded-xl bg-[#10b981] text-white font-bold shadow-lg shadow-emerald-100 hover:bg-emerald-600 transition-all active:scale-95",
+                    children: [
+                      n.jsx("svg", {
+                        width: "20",
+                        height: "20",
+                        viewBox: "0 0 24 24",
+                        fill: "none",
+                        stroke: "currentColor",
+                        strokeWidth: "2.5",
+                        strokeLinecap: "round",
+                        strokeLinejoin: "round",
+                        children: n.jsx("path", {
+                          d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3",
+                        }),
+                      }),
+                      "Install App",
+                    ],
                   }),
                 }),
               ],
