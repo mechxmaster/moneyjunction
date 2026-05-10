@@ -19085,7 +19085,13 @@ const A1 = [
   ],
   tb = ({ isOpen: r, onClose: y, onNavigate: x }) => {
     const { currentUser: d, setCurrentUser: v } = yt(),
-      N = (D) => {
+      [installPrompt, setInstallPrompt] = M.useState(window.deferredPrompt);
+    M.useEffect(() => {
+      const h = () => setInstallPrompt(window.deferredPrompt);
+      window.addEventListener("app-installable", h);
+      return () => window.removeEventListener("app-installable", h);
+    }, []);
+    const N = (D) => {
         if (D.id === "loan-mf") {
           window.open("https://voltmoney.in/check-loan-eligibility-against-mutual-funds?ref=TD39OO", "_blank");
           y();
@@ -19177,21 +19183,41 @@ const A1 = [
                 ),
               }),
             }),
-            n.jsx("div", {
+            n.jsxs("div", {
               className: "border-t pt-4",
-              children: n.jsxs("a", {
-                href: "#",
-                onClick: O,
-                className:
-                  "flex items-center gap-4 p-3 rounded-lg my-1 hover:bg-red-50 text-red-600",
-                children: [
-                  n.jsx(y0, { size: 20 }),
-                  n.jsx("span", {
-                    className: "font-medium",
-                    children: "Logout",
-                  }),
-                ],
-              }),
+              children: [
+                installPrompt &&
+                n.jsxs("a", {
+                  href: "#",
+                  onClick: () => {
+                    installPrompt.prompt();
+                    installPrompt.userChoice.then((choice) => {
+                      if (choice.outcome === "accepted") {
+                        window.deferredPrompt = null;
+                        setInstallPrompt(null);
+                      }
+                    });
+                  },
+                  className: "flex items-center gap-4 p-3 rounded-lg my-1 hover:bg-emerald-50 text-emerald-600 mb-2",
+                  children: [
+                    n.jsx("svg", { width: "20", height: "20", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round", children: n.jsx("path", { d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" }) }),
+                    n.jsx("span", { className: "font-medium", children: "Install App" })
+                  ]
+                }),
+                n.jsxs("a", {
+                  href: "#",
+                  onClick: O,
+                  className:
+                    "flex items-center gap-4 p-3 rounded-lg my-1 hover:bg-red-50 text-red-600",
+                  children: [
+                    n.jsx(y0, { size: 20 }),
+                    n.jsx("span", {
+                      className: "font-medium",
+                      children: "Logout",
+                    }),
+                  ],
+                }),
+              ],
             }),
           ],
         }),
@@ -19257,12 +19283,6 @@ const A1 = [
     const [x, d] = M.useState(""),
       [v, N] = M.useState(""),
       [O, D] = M.useState(""),
-      [installPrompt, setInstallPrompt] = M.useState(window.deferredPrompt);
-    M.useEffect(() => {
-      const h = () => setInstallPrompt(window.deferredPrompt);
-      window.addEventListener("app-installable", h);
-      return () => window.removeEventListener("app-installable", h);
-    }, []);
       C = (b) => {
         (b.preventDefault(), D(""));
         const U = gt.users.find((T) => T.email === x);
@@ -19373,40 +19393,6 @@ const A1 = [
                     className:
                       "flex w-full justify-center rounded-md bg-mj-blue px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-colors",
                     children: "Sign in",
-                  }),
-                }),
-                installPrompt &&
-                n.jsx("div", {
-                  className: "mt-6 flex justify-center",
-                  children: n.jsxs("button", {
-                    type: "button",
-                    onClick: () => {
-                      installPrompt.prompt();
-                      installPrompt.userChoice.then((choice) => {
-                        if (choice.outcome === "accepted") {
-                          window.deferredPrompt = null;
-                          setInstallPrompt(null);
-                        }
-                      });
-                    },
-                    className:
-                      "flex items-center gap-2 px-8 py-3 rounded-xl bg-[#10b981] text-white font-bold shadow-lg shadow-emerald-100 hover:bg-emerald-600 transition-all active:scale-95",
-                    children: [
-                      n.jsx("svg", {
-                        width: "20",
-                        height: "20",
-                        viewBox: "0 0 24 24",
-                        fill: "none",
-                        stroke: "currentColor",
-                        strokeWidth: "2.5",
-                        strokeLinecap: "round",
-                        strokeLinejoin: "round",
-                        children: n.jsx("path", {
-                          d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3",
-                        }),
-                      }),
-                      "Install App",
-                    ],
                   }),
                 }),
               ],
