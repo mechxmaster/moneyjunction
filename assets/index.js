@@ -19257,6 +19257,12 @@ const A1 = [
     const [x, d] = M.useState(""),
       [v, N] = M.useState(""),
       [O, D] = M.useState(""),
+      [installPrompt, setInstallPrompt] = M.useState(window.deferredPrompt);
+    M.useEffect(() => {
+      const h = () => setInstallPrompt(window.deferredPrompt);
+      window.addEventListener("app-installable", h);
+      return () => window.removeEventListener("app-installable", h);
+    }, []);
       C = (b) => {
         (b.preventDefault(), D(""));
         const U = gt.users.find((T) => T.email === x);
@@ -19367,6 +19373,25 @@ const A1 = [
                     className:
                       "flex w-full justify-center rounded-md bg-mj-blue px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-colors",
                     children: "Sign in",
+                  }),
+                }),
+                installPrompt &&
+                n.jsx("div", {
+                  className: "mt-4",
+                  children: n.jsx("button", {
+                    type: "button",
+                    onClick: () => {
+                      installPrompt.prompt();
+                      installPrompt.userChoice.then((choice) => {
+                        if (choice.outcome === "accepted") {
+                          window.deferredPrompt = null;
+                          setInstallPrompt(null);
+                        }
+                      });
+                    },
+                    className:
+                      "flex w-full justify-center rounded-md bg-emerald-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-emerald-600 transition-colors",
+                    children: "Install App",
                   }),
                 }),
               ],
