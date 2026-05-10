@@ -19203,7 +19203,7 @@ const A1 = [
       className: "flex items-center",
       children: [
         n.jsx("img", {
-          src: "./logo192.png",
+          src: "./logo.png",
           alt: "Money Junction",
           className: "block md:hidden h-8 w-auto object-contain",
         }),

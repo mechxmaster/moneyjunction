@@ -1,0 +1,35 @@
+{
+  "name": "Money Junction",
+  "short_name": "Money Junc",
+  "description": "Premium Financial Management Application",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "./mjlogo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "./logo1.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./logo1.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./logo1.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
