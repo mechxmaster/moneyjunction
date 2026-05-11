@@ -4,16 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="./mjlogo.svg" />
-  <link rel="apple-touch-icon" href="./logo1.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0d2344" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Money Junction">
+  <link rel="apple-touch-icon" href="./logo1.png">
   <link rel="manifest" href="./manifest.json" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <title>Money Junction</title>
   <script type="module" crossorigin src="./assets/index.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/index.css">
-
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
@@ -22,19 +22,30 @@
           .catch(err => console.error('Service Worker registration failed', err));
       });
     }
-
-    window.deferredPrompt = null;
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      window.deferredPrompt = e;
-      window.dispatchEvent(new CustomEvent('app-installable'));
-    });
   </script>
-
 </head>
 
 <body>
-  <div id="root"></div>
+  <noscript>
+    <div style="text-align: center; padding: 50px; font-family: sans-serif;">
+      <h2>JavaScript Required</h2>
+      <p>Please enable JavaScript to run this application.</p>
+    </div>
+  </noscript>
+  <div id="root">
+    <!-- Basic loading state to prevent white flash -->
+    <div style="height: 100vh; display: flex; align-items: center; justify-content: center; background: #ffffff;">
+      <img src="./mjlogo.svg" alt="Loading..." style="width: 80px; height: 80px; animation: pulse 1.5s infinite ease-in-out;">
+    </div>
+  </div>
+
+  <style>
+    @keyframes pulse {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(0.95); opacity: 0.8; }
+    }
+  </style>
 
 
 

@@ -4,8 +4,25 @@
   "description": "Premium Financial Management Application",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "theme_color": "#0d2344",
+  "orientation": "portrait",
+  "categories": [
+    "finance",
+    "business"
+  ],
+  "shortcuts": [
+    {
+      "name": "Dashboard",
+      "url": "./index.html",
+      "icons": [
+        {
+          "src": "./mjlogo.svg",
+          "sizes": "any"
+        }
+      ]
+    }
+  ],
   "icons": [
     {
       "src": "./mjlogo.svg",

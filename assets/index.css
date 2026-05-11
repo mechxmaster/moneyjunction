@@ -226,6 +226,21 @@
     font-feature-settings: var(--default-font-feature-settings, normal);
     font-variation-settings: var(--default-font-variation-settings, normal);
     -webkit-tap-highlight-color: transparent;
+    overscroll-behavior-y: none;
+    touch-action: manipulation;
+  }
+
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Prevent text selection on buttons and icons for a more native feel */
+  button, 
+  .icon, 
+  nav, 
+  footer {
+    user-select: none;
+    -webkit-user-select: none;
   }
 
   hr {

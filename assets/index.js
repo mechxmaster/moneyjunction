@@ -19085,13 +19085,7 @@ const A1 = [
   ],
   tb = ({ isOpen: r, onClose: y, onNavigate: x }) => {
     const { currentUser: d, setCurrentUser: v } = yt(),
-      [installPrompt, setInstallPrompt] = M.useState(window.deferredPrompt);
-    M.useEffect(() => {
-      const h = () => setInstallPrompt(window.deferredPrompt);
-      window.addEventListener("app-installable", h);
-      return () => window.removeEventListener("app-installable", h);
-    }, []);
-    const N = (D) => {
+      N = (D) => {
         if (D.id === "loan-mf") {
           window.open("https://voltmoney.in/check-loan-eligibility-against-mutual-funds?ref=TD39OO", "_blank");
           y();
@@ -19183,41 +19177,21 @@ const A1 = [
                 ),
               }),
             }),
-            n.jsxs("div", {
+            n.jsx("div", {
               className: "border-t pt-4",
-              children: [
-                installPrompt &&
-                n.jsxs("a", {
-                  href: "#",
-                  onClick: () => {
-                    installPrompt.prompt();
-                    installPrompt.userChoice.then((choice) => {
-                      if (choice.outcome === "accepted") {
-                        window.deferredPrompt = null;
-                        setInstallPrompt(null);
-                      }
-                    });
-                  },
-                  className: "flex items-center gap-4 p-3 rounded-lg my-1 hover:bg-emerald-50 text-emerald-600 mb-2",
-                  children: [
-                    n.jsx("svg", { width: "20", height: "20", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round", children: n.jsx("path", { d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" }) }),
-                    n.jsx("span", { className: "font-medium", children: "Install App" })
-                  ]
-                }),
-                n.jsxs("a", {
-                  href: "#",
-                  onClick: O,
-                  className:
-                    "flex items-center gap-4 p-3 rounded-lg my-1 hover:bg-red-50 text-red-600",
-                  children: [
-                    n.jsx(y0, { size: 20 }),
-                    n.jsx("span", {
-                      className: "font-medium",
-                      children: "Logout",
-                    }),
-                  ],
-                }),
-              ],
+              children: n.jsxs("a", {
+                href: "#",
+                onClick: O,
+                className:
+                  "flex items-center gap-4 p-3 rounded-lg my-1 hover:bg-red-50 text-red-600",
+                children: [
+                  n.jsx(y0, { size: 20 }),
+                  n.jsx("span", {
+                    className: "font-medium",
+                    children: "Logout",
+                  }),
+                ],
+              }),
             }),
           ],
         }),
