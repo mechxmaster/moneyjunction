@@ -13952,7 +13952,7 @@ const A1 = [
     },
     {
       id: "post-office-savings",
-      title: "Post Office Savings",
+      title: "Financial Services",
       icon: n.jsx(Un, { className: "text-red-600" }),
       implemented: !1,
       details: "Government backed savings schemes for secure returns.",
@@ -19078,7 +19078,7 @@ const A1 = [
     },
     {
       id: "post-office-savings",
-      title: "Post Office Savings",
+      title: "Financial Services",
       icon: n.jsx(Un, { size: 20 }),
       implemented: !1,
     },
